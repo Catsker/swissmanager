@@ -1,0 +1,83 @@
+@import '@/styles/variables.scss';
+
+.home-page {
+  width: 100%;
+  max-width: 56.25rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.filters-list {
+  display: flex;
+  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.create-section {
+  &__content {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__input {
+    flex: 1;
+  }
+}
+
+.tournaments-section {
+  margin-top: 2rem;
+
+  &__title {
+
+  }
+
+  &__search {
+    margin-bottom: 1rem;
+
+    &-input {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__card {
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.1s ease;
+
+    &:hover {
+      box-shadow: 0 2px 6px $hover-item;
+      transform: translateY(-2px);
+    }
+
+    &-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: $color-text;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+  }
+
+  &__empty {
+    color: #999;
+    text-align: center;
+    font-style: italic;
+    padding: 1rem 0;
+  }
+}

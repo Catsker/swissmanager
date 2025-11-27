@@ -1,0 +1,15 @@
+@import "@/styles/mixins.scss";
+
+.confirm-dialog {
+  @include dialog;
+
+  &__buttons {
+    &--wide {
+      display: flex;
+
+      .confirm-dialog__button {
+        width: 100%;
+      }
+    }
+  }
+}

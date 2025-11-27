@@ -1,0 +1,15 @@
+@import "@/styles/mixins.scss";
+
+.tournament-page {
+
+  &__tournament-name {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.tournament-table {
+  width: 100%;
+
+  @include table
+}

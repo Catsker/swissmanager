@@ -1,0 +1,110 @@
+@import '@/styles/variables.scss';
+
+.chess-board {
+  width: 12rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.board {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  &__cell {
+    aspect-ratio: 1;
+
+    &--black {
+      background-color: $color-primary;
+    }
+
+    &--white {
+      background-color: $color-white;
+    }
+  }
+}
+
+.knight {
+  width: 33.3333%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: knightMove 4s linear infinite;
+
+  &__icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes knightMove {
+  0%, 3.125% {
+    top: 0;
+    left: 0;
+  }
+  3.125%, 12.5% {
+    top: 33.3333%;
+    left: 66.6666%;
+  }
+  12.5%, 15.625% {
+    top: 33.3333%;
+    left: 66.6666%;
+  }
+  15.625%, 25% {
+    top: 66.6666%;
+    left: 0;
+  }
+  25%, 28.125% {
+    top: 66.6666%;
+    left: 0;
+  }
+  28.125%, 37.5% {
+    top: 0;
+    left: 33.3333%;
+  }
+  37.5%, 40.625% {
+    top: 0;
+    left: 33.3333%;
+  }
+  40.625%, 50% {
+    top: 66.6666%;
+    left: 66.6666%;
+  }
+  50%, 53.125% {
+    top: 66.6666%;
+    left: 66.6666%;
+  }
+  53.125%, 62.5% {
+    top: 33.3333%;
+    left: 0;
+  }
+  62.5%, 65.625% {
+    top: 33.3333%;
+    left: 0;
+  }
+  65.625%, 75% {
+    top: 0;
+    left: 66.6666%;
+  }
+  75%, 78.125% {
+    top: 0;
+    left: 66.6666%;
+  }
+  78.125%, 87.5% {
+    top: 66.6666%;
+    left: 33.3333%;
+  }
+  87.5%, 90.625% {
+    top: 66.6666%;
+    left: 33.3333%;
+  }
+  90.625%, 100% {
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,11 @@
+.logo {
+  display: inline-block;
+  height: 100%;
+}
+
+.logo__img {
+  height: 100%;
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+}

@@ -1,0 +1,80 @@
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: $color-bg;
+  color: $color-text;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition;
+
+  &:hover {
+    color: $color-primary-dark;
+  }
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+.text-center { text-align: center; }
+
+.color-primary { color: $color-primary; }
+.color-danger { color: $color-danger; }
+.rounded {border-radius: $radius-l}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: $color-text;
+}
+.basicInput {
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  padding: 0.6rem 0.8rem;
+  background-color: $color-white;
+  transition: border-color $transition, box-shadow $transition;
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+    box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
+  }
+
+  &::placeholder {
+    color: $color-text-info;
+  }
+}
+.removeInputArrows {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  -moz-appearance: textfield;
+}
+.square {
+  aspect-ratio: 1;
+}
+.center-x {
+  display: flex;
+  justify-content: center;
+}
