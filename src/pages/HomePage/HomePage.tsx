@@ -23,6 +23,7 @@ const HomePage = () => {
   const [isPasswordDialogOpen, setIsPasswordDialogOpen] = useState(false);
   const [userTournaments, setUserTournaments] = useState<Tournament[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isCreating, setIsCreating] = useState(false);
 
   const navigate = useNavigate();
 
@@ -121,9 +122,16 @@ const HomePage = () => {
   };
 
   const handleConfirmCreateTournament = async (password: string) => {
+    if (isCreating) {
+      console.log('⏸️ Tournament creation already in progress');
+      return false;
+    }
+
     if (password.length < 8) {
       return false;
     }
+
+    setIsCreating(true);
 
     try {
       const tournamentId = crypto.randomUUID();
@@ -164,6 +172,8 @@ const HomePage = () => {
       console.error('Ошибка создания турнира:', error);
       alert('Ошибка при создании турнира');
       return false;
+    } finally {
+      setIsCreating(false);
     }
   };
 
