@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage";
 import TournamentPage from "./pages/TournamentPage";
 import Header from "@/components/Header";
 import NotFoundPage from "@/pages/NotFoundPage"
-import './app.scss'
+import './App.scss'
 
 function App() {
   return (
